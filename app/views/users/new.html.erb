@@ -1,0 +1,10 @@
+<%= form_for @upload, html: { multipart: true } do |f| %>
+     	
+     	<p>Name<br><%= f.text_field :name %></p><br>
+      	
+      	<%= f.file_field :attachments , multiple: true   %><br><br>
+      	
+      <%= f.submit%>
+
+<%end%>
+

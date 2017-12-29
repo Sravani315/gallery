@@ -1,0 +1,10 @@
+
+<p><strong>Name:</strong><%=@upload.name%></p>
+<% if @upload.attachments? %>
+  <ul>
+    <% @upload.attachments.each do |attachment| %>
+      <li><%= attachment.url %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= link_to "back",  users_path %>
