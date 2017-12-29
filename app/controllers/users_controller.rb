@@ -21,6 +21,11 @@ class UsersController < ApplicationController
     @upload=User.find(params[:id])
   end
 
+  def destroy
+  	@upload = User.find(params[:id])
+  	@upload.destroy
+  	redirect_to users_path
+  end
   private
   	def allowed_params
   		params.require(:user).permit(:name,attachments: [])

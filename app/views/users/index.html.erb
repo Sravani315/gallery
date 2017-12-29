@@ -1,19 +1,19 @@
 <%= link_to "New Upload" ,new_user_path%>
 
-<table>
-	<% @uploads.each do |upload|%>
+<table >
 	<tr>
 		<th>Name</th>
-		<td><%= upload.name %></td>
+		<th >List of images</th>	
 	</tr>
+	<% @uploads.each do |upload|%>
 	<tr>
-		<th>List of images</th>
+		<td><%= upload.name %></td>
 		<td>
-			<ul>
-			    <% upload.attachments.each do |attachment| %>
-			      <li><%== link_to(image_tag(attachment.url, alt: 'Image'), attachment.url, target: '_blank')%></li>
-			    <% end %>
-		  	</ul>
+		    <% upload.attachments.each do |attachment| %>
+			    <%== link_to(image_tag(attachment.url, alt: 'Image',width: '50', height: '50'), attachment.url, target: '_target')%>
+			<% end %>
+			<%=link_to "Show",upload%>
+			<%=link_to "Delete",user_path(upload), method: :delete%>
 	  	</td>
   	</tr>
 <%end%>

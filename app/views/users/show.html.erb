@@ -3,7 +3,7 @@
 <% if @upload.attachments? %>
   <ul>
     <% @upload.attachments.each do |attachment| %>
-      <li><%= attachment.url %></li>
+      <li><%=link_to(image_tag(attachment.url, alt: 'pdf', width: '50', height: '50'), attachment.url, target: '_self') %></li>
     <% end %>
   </ul>
 <% end %>
