@@ -8,7 +8,7 @@ end
 ruby '2.4.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -27,11 +27,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'carrierwave', '~>1.0'
+gem 'carrierwave', '~> 1.3.1'
 
-gem 'pry'
-
-gem 'mini_magick', '~>4.9.4'
+gem 'mini_magick', '~> 4.9.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -46,6 +44,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry'
 end
 
 group :development do
