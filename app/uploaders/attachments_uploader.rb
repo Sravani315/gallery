@@ -1,8 +1,7 @@
 class AttachmentsUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -16,15 +15,15 @@ class AttachmentsUploader < CarrierWave::Uploader::Base
 
   version :thumb do
     process resize_to_fill: [350, 350]
-end
+  end
 
-def content_type_whitelist
-    /image\//
-end
+  def content_type_whitelist
+      /image\//
+  end
 
-def extension_whitelist
-    %w(jpg jpeg gif png)
-end
+  def extension_whitelist
+      %w(jpg jpeg gif png)
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)

@@ -28,6 +28,6 @@ class UsersController < ApplicationController
   end
   private
   	def allowed_params
-  		params.require(:user).permit(:name,attachments: [])
+  		params.require(:user).permit(:name, :attachments)
   	end
 end

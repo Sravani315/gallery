@@ -8,7 +8,8 @@ set :repo_url, "github.com/Sravani315/demo_app.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/var/www/demo_app"
+# set :deploy_to, "/var/www/demo_app"
+set :stages, ["production"] 
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
