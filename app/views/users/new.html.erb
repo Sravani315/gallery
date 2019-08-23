@@ -1,7 +1,0 @@
-<%= form_for @upload, html: { multipart: true } do |f| %>
-  <%= image_tag(@upload.attachments_url) if @upload.attachments? %>
- 	<p>Name<br><%= f.text_field :name %></p><br>	
-  <%= f.file_field :attachments , multiple: true   %><br><br>
-  <%= f.submit%>
-<%end%>
-
